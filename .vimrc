@@ -73,6 +73,9 @@ Plug 'plasticboy/vim-markdown'
 " register tpope/vim-surround
 Plug 'tpope/vim-surround'
 
+" register godlygeek/tabular - line up
+Plug 'godlygeek/tabular'
+
 call plug#end()
 
 " -------------------- vim-plug-settings-end --------------------------
