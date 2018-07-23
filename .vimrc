@@ -76,6 +76,9 @@ Plug 'tpope/vim-surround'
 " register godlygeek/tabular - line up
 Plug 'godlygeek/tabular'
 
+" retister Yggdroot/indentLine
+Plug 'Yggdroot/indentLine'
+
 call plug#end()
 
 " -------------------- vim-plug-settings-end --------------------------
