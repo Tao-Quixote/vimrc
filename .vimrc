@@ -264,3 +264,9 @@ highlight Todo guifg=yellow guibg=bg gui=bold
 
 set termguicolors
 " -------------------- theme-settings-end ------------------------------
+
+
+" -------------------- number-settings-start ------------------------------
+" 对于 0xxx，Vim 默认当成八进制对待，下面会告诉 Vim 把所有的数字当成十进制
+set nrformats=
+" -------------------- tnumber-settings-end -------------------------------
