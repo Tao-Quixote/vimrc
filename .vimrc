@@ -79,6 +79,11 @@ Plug 'godlygeek/tabular'
 " retister Yggdroot/indentLine
 Plug 'Yggdroot/indentLine'
 
+" register kana/vim-textobj-user & kana/vim-textobj-entire
+" plugin entire depends on plugin user
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+
 call plug#end()
 
 " -------------------- vim-plug-settings-end --------------------------
