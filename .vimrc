@@ -261,6 +261,18 @@ set ignorecase
 " -------------------- self-settings-end ------------------------------
 
 
+" -------------------- autocommand-settings-start ----------------------------
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  " Enable file type detection
+  filetype on
+
+  " tell vim-commentary the comment string of specific filetype
+  " autocmd FileType apache setlocal commentstring=#\ %s
+endif
+" -------------------- autocommand-settings-end ------------------------------
+
+
 " -------------------- theme-settings-start ---------------------------
 " color tender
 highlight Normal guibg=#000001 " 纯黑背景，酷
