@@ -218,6 +218,13 @@ let g:vim_markdown_conceal=0
 " -------------------- vim-markdown-settings-end ----------------------
 
 
+" -------------------- html5.vim-settings-start --------------------
+let g:html5_rdfa_attributes_complete = 0
+let g:html5_microdata_attributes_complete = 0
+let g:html5_aria_attributes_complete = 0
+let g:html5_event_handler_attributes_complete = 0
+" -------------------- html5.vim-settings-end ----------------------
+
 
 " -------------------- self-settings-start ----------------------------
 
