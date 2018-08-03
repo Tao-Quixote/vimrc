@@ -293,4 +293,12 @@ set termguicolors
 " -------------------- number-settings-start ------------------------------
 " 对于 0xxx，Vim 默认当成八进制对待，下面会告诉 Vim 把所有的数字当成十进制
 set nrformats=
-" -------------------- tnumber-settings-end -------------------------------
+" -------------------- number-settings-end --------------------------------
+
+" -------------------- command-complete-settings-start ------------------------------
+"  zsh style
+set wildmenu
+set wildmode=full
+" bash shell
+" set wildmode=longest,list
+" -------------------- command-complete-settings-end --------------------------------
