@@ -302,3 +302,8 @@ set wildmode=full
 " bash shell
 " set wildmode=longest,list
 " -------------------- command-complete-settings-end --------------------------------
+
+" -------------------- history-settings-start ------------------------------
+" set history to remeber 200 Ex commands, default is 20
+set history=200
+" -------------------- history-settings-end --------------------------------
