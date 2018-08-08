@@ -1,5 +1,8 @@
+" -------------------- vim-mapleader-settings-start ---------------------
 " map mapleader
 let mapleader=','
+"cnoremap <C-p> <Up>
+"cnoremap <C-n> <Down>
 
 " -------------------- vim-mapleader-settings-end -----------------------
 
@@ -20,7 +23,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " register vim-startify
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 
 " register typescript-vim
 Plug 'leafgarland/typescript-vim'
@@ -310,3 +313,26 @@ set wildmode=full
 " set history to remeber 200 Ex commands, default is 20
 set history=200
 " -------------------- history-settings-end --------------------------------
+
+
+" -------------------- buffer-settings-start ------------------------------
+" keymappings of buffer jump
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
+" keymappings of tab jump
+nnoremap <silent> [t :tabprevious<CR>
+nnoremap <silent> ]t :tabnext<CR>
+nnoremap <silent> [T :tabfirst<CR>
+nnoremap <silent> ]T :tablast<CR>
+
+" 允许在 buffer 修改后跳转到其他 buffer，以便于使用 bufdo、argdo {cmd} 执行批量修改
+" 如果不开启 hidden，当前 buffer 做了修改但是未保存时，不能跳转到其他
+" buff，上面定义的 keymappings 也不能使用
+set hidden 
+
+" 映射当前文件（buffer） 所在的目录
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+" -------------------- buffer-settings-end --------------------------------
