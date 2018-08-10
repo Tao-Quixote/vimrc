@@ -7,6 +7,14 @@ let mapleader=','
 " -------------------- vim-mapleader-settings-end -----------------------
 
 
+" -------------------- something-sexy-settings-start -----------------------
+" we disabled Up/Down/Left/Right keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+" -------------------- something-sexy-settings-end -------------------------
+
 
 " -------------------- vim-plug-settings-start --------------------------
 
@@ -47,10 +55,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " register nerdtree
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " register nerdtree-git-plugin
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " register YouCompleteMe
 Plug 'Valloric/YouCompleteMe'
@@ -152,11 +160,16 @@ let g:javascript_conceal_underscore_arrow_function = "🞅"
 
 " -------------------- vim-NERDTree-setting-start ---------------------
 
-map <leader>g :NERDTreeToggle<CR>
-map <leader>f :NERDTreeFind<CR>
+" map <leader>g :NERDTreeToggle<CR>
+" map <leader>f :NERDTreeFind<CR>
 
 " let nerdtree show hidden file
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
+
+" use netrw to replace NERDTree, the settngs are as follows:
+let g:netrw_banner = 0 " 隐藏 banner
+let g:netrw_liststyle = 3 " 设置目录树展示样式
+map <leader>g :Vexplore<CR>
 
 " -------------------- vim-NERDTree-setting-end -----------------------
 
@@ -313,6 +326,14 @@ set wildmode=full
 " set history to remeber 200 Ex commands, default is 20
 set history=200
 " -------------------- history-settings-end --------------------------------
+
+
+" -------------------- window-settings-start ------------------------------
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+" -------------------- window-settings-end --------------------------------
 
 
 " -------------------- buffer-settings-start ------------------------------
