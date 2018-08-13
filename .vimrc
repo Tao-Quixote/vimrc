@@ -95,9 +95,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 
-" register ashisha/image.vim
-Plug 'ashisha/image.vim'
-
 call plug#end()
 
 " -------------------- vim-plug-settings-end --------------------------
