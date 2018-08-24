@@ -1,8 +1,6 @@
 " -------------------- vim-mapleader-settings-start ---------------------
 " map mapleader
 let mapleader=','
-"cnoremap <C-p> <Up>
-"cnoremap <C-n> <Down>
 
 " -------------------- vim-mapleader-settings-end -----------------------
 
@@ -61,7 +59,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " register YouCompleteMe
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 
 " register vim-airline
 Plug 'vim-airline/vim-airline'
@@ -88,12 +86,12 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 
 " retister Yggdroot/indentLine
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 
 " register kana/vim-textobj-user & kana/vim-textobj-entire
 " plugin entire depends on plugin user
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-entire'
+"Plug 'kana/vim-textobj-user'
+"Plug 'kana/vim-textobj-entire'
 
 call plug#end()
 
@@ -275,6 +273,9 @@ set hlsearch
 " ignore case when searching
 set ignorecase
 
+" visualbell instead of bell
+set visualbell
+
 " Show line number on the current line and relative numbers on all other lines.
 "set relativenumber
 
@@ -311,6 +312,7 @@ set termguicolors
 set nrformats=
 " -------------------- number-settings-end --------------------------------
 
+
 " -------------------- command-complete-settings-start ------------------------------
 "  zsh style
 set wildmenu
@@ -318,6 +320,7 @@ set wildmode=full
 " bash shell
 " set wildmode=longest,list
 " -------------------- command-complete-settings-end --------------------------------
+
 
 " -------------------- history-settings-start ------------------------------
 " set history to remeber 200 Ex commands, default is 20
@@ -331,6 +334,16 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 " -------------------- window-settings-end --------------------------------
+
+
+
+" -------------------- empty-line-settings-start ------------------------------
+" Ctrl-j/k inserts blank line below/above, and Alt-j/k deletes.
+nnoremap <silent><A-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><A-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+" -------------------- empty-line-settings-end --------------------------------
 
 
 " -------------------- buffer-settings-start ------------------------------
