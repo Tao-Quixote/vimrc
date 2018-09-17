@@ -46,6 +46,9 @@ Plug 'digitaltoad/vim-pug'
 " register vim-vue
 Plug 'posva/vim-vue'
 
+" register vue-stylus
+Plug 'wavded/vim-stylus'
+
 " register vim-gitgutter
 Plug 'airblade/vim-gitgutter'
 
@@ -57,6 +60,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 " register nerdtree-git-plugin
 " Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" register tpope/vim-vinegar
+Plug 'tpope/vim-vinegar'
 
 " register YouCompleteMe
 " Plug 'Valloric/YouCompleteMe'
@@ -252,7 +258,7 @@ syntax on
 set nu
 
 " set cursor
-set cursorcolumn
+" set cursorcolumn
 set cursorline
 
 " set autoindent
@@ -275,6 +281,9 @@ set ignorecase
 
 " visualbell instead of bell
 set visualbell
+
+" set incsearch, highlight the result when searching
+set incsearch
 
 " Show line number on the current line and relative numbers on all other lines.
 "set relativenumber
