@@ -99,6 +99,9 @@ Plug 'godlygeek/tabular'
 "Plug 'kana/vim-textobj-user'
 "Plug 'kana/vim-textobj-entire'
 
+" Plug 'mbbill/undotree'
+Plug 'mbbill/undotree'
+
 call plug#end()
 
 " -------------------- vim-plug-settings-end --------------------------
@@ -273,17 +276,9 @@ set softtabstop=2
 set shiftwidth=2
 set shiftround
 
-" highlight the search result
-set hlsearch
-
-" ignore case when searching
-set ignorecase
 
 " visualbell instead of bell
 set visualbell
-
-" set incsearch, highlight the result when searching
-set incsearch
 
 " Show line number on the current line and relative numbers on all other lines.
 "set relativenumber
@@ -376,3 +371,26 @@ set hidden
 " 映射当前文件（buffer） 所在的目录
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " -------------------- buffer-settings-end --------------------------------
+
+
+" -------------------- search-settings-start ------------------------------
+" search
+set hlsearch
+set ignorecase
+set incsearch
+
+" Visual mode search
+" Here is an idea for a mapping that makes it possible to do a search for the selected text:
+function! s:VSetSearch()
+  let temp = @@
+  norm! gvy
+  let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
+  " Use this line instead of the above to match matches spanning across lines
+  "let @/ = '\V' . substitute(escape(@@, '\'), '\_s\+', '\\_s\\+', 'g')
+  call histadd('/', substitute(@/, '[?/]', '\="\\%d".char2nr(submatch(0))', 'g'))
+  let @@ = temp
+endfunction
+
+vnoremap * :<C-u>call <SID>VSetSearch()<CR>/<CR>
+vnoremap # :<C-u>call <SID>VSetSearch()<CR>?<CR>
+" -------------------- search-settings-end --------------------------------
