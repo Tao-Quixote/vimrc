@@ -249,6 +249,11 @@ let g:html5_event_handler_attributes_complete = 0
 " -------------------- html5.vim-settings-end ----------------------
 
 
+" -------------------- undotree.vim-settings-start ---------------------
+nnoremap <F3> :UndotreeToggle<cr>
+" -------------------- undotree.vim-settings-start ---------------------
+
+
 " -------------------- self-settings-start ----------------------------
 
 " code fold
@@ -261,8 +266,8 @@ syntax on
 set nu
 
 " set cursor
-" set cursorcolumn
-set cursorline
+set cursorcolumn
+" set cursorline
 
 " set autoindent
 set autoindent
